@@ -35,9 +35,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'tpope/vim-fugitive'
-"Plug 'udalov/kotlin-vimPlug'
 Plug 'ryanoasis/vim-devicons'
-"Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
@@ -49,7 +47,7 @@ silent! helptags ALL
 let g:gitgutter_terminal_reports_focus=0
 
 "CoClinter
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <leader><TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
