@@ -3,8 +3,6 @@ set number
 set autoindent
 set ignorecase
 set smartcase
-set hlsearch
-set incsearch
 set history=512
 set cmdheight=2  
 set tabstop=4
@@ -12,7 +10,6 @@ set t_Co=256
 set cursorline
 set showtabline=2
 set laststatus=2
-set showtabline=2
 
 " Find Plug Vim & install if failed
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -28,9 +25,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin()
 Plug 'preservim/nerdtree'
-Plug 'dense-analysis/ale'
 Plug 'airblade/vim-gitgutter'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'frazrepo/vim-rainbow'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
@@ -38,10 +34,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 call plug#end()
-
-"ALE
-packloadall
-silent! helptags ALL
 
 "GitGutter
 let g:gitgutter_terminal_reports_focus=0
