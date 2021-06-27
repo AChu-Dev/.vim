@@ -3,6 +3,8 @@ set number
 set autoindent
 set ignorecase
 set smartcase
+set hlsearch
+set incsearch
 set history=512
 set cmdheight=2  
 set tabstop=4
@@ -10,6 +12,7 @@ set t_Co=256
 set cursorline
 set showtabline=2
 set laststatus=2
+set showtabline=2
 
 " Find Plug Vim & install if failed
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -33,7 +36,12 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
+Plug 'mattn/emmet-vim'
 call plug#end()
+
+"ALE
+packloadall
+silent! helptags ALL
 
 "GitGutter
 let g:gitgutter_terminal_reports_focus=0
@@ -87,3 +95,4 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>
 nnoremap<C-l> :tabprevious<CR>
+let g:user_emmet_leader_key=','
